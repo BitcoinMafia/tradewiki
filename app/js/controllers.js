@@ -10,7 +10,7 @@ angular.module('myApp.controllers', []).
   	})
 
     $scope.sidebar = {
-      limit: 10,
+      limit: 800,
       alexa: 500000,
       categories: Data.get({
         type: "categories"

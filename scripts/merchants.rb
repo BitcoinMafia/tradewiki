@@ -98,8 +98,10 @@ module Merchants
 
 		def clean_data
 			@clean = @data.select do |d|
+				regex = /prweb|etsy|500px|onion|herokuapp|openstreetmap|google|facebook|amazon|bitcointalk|soundcloud|opensourcerer/
+
 				!d["alexa"].zero? &&
-				d["url"].scan(/openstreetmap|google|facebook|amazon|bitcointalk|soundcloud/).blank?
+				d["url"].scan(regex).blank?
 			end
 		end
 

@@ -38,7 +38,6 @@ var BubbleChart = function(data, sidebar) {
   ]
 
   self.data = data
-  // self.dataOriginal = data // second data object for filter
 
   self.tooltip = CustomTooltip("bubble-tooltip", 240);
 
