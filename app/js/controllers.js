@@ -5,8 +5,8 @@
 angular.module('myApp.controllers', []).
   controller('mainController', function($scope, Data) {
 
-  	$scope.merchants = Data.get({
-  		type: "merchants"
+  	$scope.merchants = Data.query({
+  		type: "merchants",
   	})
 
     $scope.sidebar = {

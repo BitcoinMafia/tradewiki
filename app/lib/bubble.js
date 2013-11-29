@@ -77,17 +77,13 @@ var BubbleChart = function(data, sidebar) {
 BubbleChart.prototype.create_nodes = function() {
   var self = this;
 
-  var names = Object.keys(self.data)
-
-  for (var i=0; i<names.length; i++) {
-
-    var merchant = self.data[names[i]]
+  self.data.forEach(function(merchant) {
 
     var node = {
       id: merchant.alexa,
       radius: self.radius_scale(self.inverseAlexa(merchant.alexa)),
       alexa: merchant.alexa,
-      name: names[i],
+      name: merchant.name,
       url: merchant.url,
       description: merchant.description,
       category: merchant.category,
@@ -100,7 +96,7 @@ BubbleChart.prototype.create_nodes = function() {
 
     var nodeClone = $.extend(true, {}, node);
     self.nodesOriginal.push(nodeClone);
-  }
+  })
 
   self.nodes.sort(function(a, b) {
     b.alexa - a.alexa;

@@ -101,7 +101,8 @@ module Merchants
 				regex = /prweb|etsy|500px|onion|openstreetmap|
 				google|facebook|amazon|bitcointalk|soundcloud|
 				opensourcerer|tripadvisor|carbonmade|hotfrog|eff|
-				menupages|bitcoin\.it/
+				menupages|bitcoin\.it|goo\.gl|google\.com|bbc\.co|
+				archive\.org|wired\.com|urbanspoon|bit\.ly/
 				ap d["name"] if !d["url"].scan(regex).blank?
 
 				!d["alexa"].zero? &&
@@ -110,11 +111,11 @@ module Merchants
 			end
 		end
 
-		# def sort_data
-		# 	@clean.sort_by do |k, v|
-		# 		v
-		# 	end
-		# end
+		def sort_data
+			@clean = @clean.sort_by do |m|
+				m["alexa"]
+			end
+		end
 
 		def restructure_data
 			@new_hash = {}

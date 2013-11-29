@@ -1,43 +1,38 @@
 <table class="table table-striped table-hover" style>
 	<thead>
-		<tr>
-			<th>Alexa Rank</th>
-			<th>Name</th>
-			<th>Description</th>
-			<th>Category</th>
-			<th>Subcategory</th>
+		<tr class='text-center'>
+			<th class="col-sm-1">Alexa Rank</th>
+			<th class="col-sm-3">Name</th>
+			<th class="col-sm-8">Description</th>
+			<!-- <th>Category</th> -->
 		</tr>
 	</thead>
 	<tbody>
-		<tr class='text-center' ng-repeat="(key, value) in merchantsArray(merchants)">
+		<tr class='text-center' ng-repeat="merchant in merchants | sidebarFilter:sidebar">
 			<td>
-				<h3>
+				<h4>
 					<span class="label label-success label-square">
-						<a href="http://www.alexa.com/siteinfo/{{value.url}}" target="_blank">{{value.alexa.withCommas()}}</a>
+						<a href="http://www.alexa.com/siteinfo/{{merchant.url}}" target="_blank">{{merchant.alexa.withCommas()}}</a>
 					</span>
-				</h3>
+				</h4>
 			</td>
 			<td>
 				<h4>
 					<strong>
-						<a href="{{value.url}}" target="_blank">{{key}}</a>
+						<a href="{{merchant.url}}" target="_blank">{{merchant.name}}</a>
 					</strong>
 				</h4>
+				<h6>
+					<strong>{{merchant.category}}</strong>
+				</h6>
+				<h6>
+					<strong>{{merchant.subcategory}}</strong>
+				</h6>
 			</td>
 			<td>
 				<blockquote>
-					{{value.description}}
+					{{merchant.description}}
 				</blockquote>
-			</td>
-			<td>
-				<h6>
-					<strong>{{value.category}}</strong>
-				</h6>
-			</td>
-			<td>
-				<h6>
-					<strong>{{value.subcategory}}</strong>
-				</h6>
 			</td>
 		</tr>
 	</tbody>
