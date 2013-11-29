@@ -143,6 +143,13 @@ BubbleChart.prototype.create_vis = function() {
       window.open(d.url, "_blank")
     })
 
+  self.circles
+    .transition()
+    .duration(500)
+    .attr("r", function(d) {
+      return d.radius;
+    });
+
 };
 
 BubbleChart.prototype.charge = function(d) {
