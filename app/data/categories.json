@@ -29,7 +29,7 @@
   },
   "Bitcoin eWallets": {
     "checked": true,
-    "color": "#d2850b",
+    "color": "#7f9293",
     "subcategory": [
       "Bitcoin Banking and Ewallets"
     ]
@@ -41,7 +41,7 @@
   },
   "Internet & Mobile services": {
     "checked": true,
-    "color": "#7f9293",
+    "color": "#d2850b",
     "subcategory": ["Bitcoin-related",
       "Connectivity", "Design",
       "Web Hosting",
