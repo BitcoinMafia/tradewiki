@@ -35,8 +35,8 @@ angular.module('myApp.directives', [])
       value = $parse($attrs['ngValue'])($scope);
 
       return $(element).iCheck({
-        checkboxClass: "icheckbox_square-blue",
-        radioClass: 'iradio_square-blue',
+        checkboxClass: "icheckbox_minimal-grey",
+        radioClass: 'iradio_minimal-grey',
         increaseArea: "20%",
       }).on('ifChanged', function(event) {
         if ($(element).attr('type') === 'checkbox' && $attrs['ngModel']) {
