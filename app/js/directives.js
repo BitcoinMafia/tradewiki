@@ -18,13 +18,6 @@ angular.module('myApp.directives', [])
     transclude: true,
   };
 })
-.directive('chartBubble', function(){
-  return {
-    restrict: 'E',
-    templateUrl: 'partials/chart-bubble.html',
-    transclude: true,
-  };
-})
 .directive('chartTable', function(){
   return {
     restrict: 'E',
@@ -52,18 +45,22 @@ angular.module('myApp.directives', [])
           });
         }
       });
-
-
     }
   }
 })
-.directive("chart-bubble", function() {
+.directive("chartBubble", function() {
   return {
     scope: {
       sidebar: "=sidebar"
     },
     link: function($scope, element, $attrs) {
       console.log($scope.sidebar)
+
+      d3.json("data/merchants.json", function(data) {
+        var chart = new BubbleChart(json);
+        chart.start();
+        chart.display_all();
+      })
 
       $scope.$watch("sidebar", function(sidebar) {
         console.log(sidebar)

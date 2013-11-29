@@ -47,8 +47,7 @@
         <label class='icheck-box'>
           <input type="checkbox"
           ng-model="value.checked" i-check checked="{{value.checked}}">
-
-          <div class="checkbox-label text-{{value.checked ? 'default' : 'muted'}}" style="color:{{value.color}}">
+          <div class="checkbox-label text-{{value.checked ? 'default' : 'muted'}}" style="color:{{value.checked ? value.color : ''}}">
             {{key}}
           </div>
         </label>
