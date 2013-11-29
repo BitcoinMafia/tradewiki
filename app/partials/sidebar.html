@@ -1,6 +1,6 @@
 <br><br>
 <div class="row">
-  <div class="panel panel-info">
+  <div class="panel panel-primary">
     <div class="panel-heading">
       <h3 class="panel-title">FILTERS</h3>
     </div>
@@ -8,7 +8,7 @@
       <div class="row">
         <div class="col-md-4">
           <h4>
-            <span class="label label-info label-square">SEARCH: </span>
+            <span class="label label-primary label-square">SEARCH: </span>
           </h4>
         </div>
         <div class="col-md-8">
@@ -18,7 +18,7 @@
       <div class="row">
         <div class="col-md-4">
           <h4>
-            <span class="label label-info label-square">ALEXA: </span>
+            <span class="label label-primary label-square">ALEXA: </span>
           </h4>
         </div>
         <div class="col-md-8">
@@ -29,7 +29,7 @@
       <div class="row">
         <div class="col-md-4">
           <h4>
-            <span class="label label-info label-square">LIMIT: </span>
+            <span class="label label-primary label-square">LIMIT: </span>
           </h4>
         </div>
         <div class="col-md-8">
@@ -40,14 +40,14 @@
       <br>
       <div class="line-divider"></div>
       <h4 class='text-center'>
-        <span class="label label-info label-square">CATEGORIES: </span>
+        <span class="label label-primary label-square">CATEGORIES: </span>
       </h4>
       <br>
       <div ng-repeat="(key, value) in sidebar.categories">
         <label class='icheck-box'>
           <input type="checkbox"
           ng-model="value.checked" i-check checked="{{value.checked}}">
-          <div class="checkbox-label text-{{value.checked ? 'default' : 'muted'}}" style="color:{{value.checked ? value.color : ''}}">
+          <div class="checkbox-label text-{{value.checked ? 'default' : 'muted'}}" >
             {{key}}
           </div>
         </label>

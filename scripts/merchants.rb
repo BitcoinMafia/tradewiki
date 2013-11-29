@@ -92,17 +92,14 @@ module Merchants
 
 		def all
 			clean_data
+			filter_uniques
 			sort_data
 			save
 		end
 
 		def clean_data
 			@clean = @data.select do |d|
-				regex = /prweb|etsy|500px|\.onion|openstreetmap|
-				google|facebook|amazon|bitcointalk|soundcloud|
-				opensourcerer|tripadvisor|carbonmade|hotfrog|eff|
-				menupages|bitcoin\.it|goo\.gl|google\.com|bbc\.co|
-				archive\.org|wired\.com|urbanspoon|bit\.ly/
+				regex = /prweb|etsy|500px|\.onion|openstreetmap|google|facebook|amazon|bitcointalk|soundcloud|opensourcerer|tripadvisor|carbonmade|hotfrog|eff|menupages|bitcoin\.it|goo\.gl|google\.com|bbc\.co|archive|wired\.com|urbanspoon|bit\.ly/
 				ap d["name"] if !d["url"].scan(regex).blank?
 
 				!d["alexa"].zero? &&
@@ -115,6 +112,17 @@ module Merchants
 			@clean = @clean.sort_by do |m|
 				m["alexa"]
 			end
+		end
+
+		def filter_uniques
+			collection = []
+			@clean = @clean.map do |c|
+				unless collection.include?(c["name"])
+					collection << c["name"]
+					c
+				end
+			end
+			@clean.compact!
 		end
 
 		def restructure_data

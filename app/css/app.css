@@ -24,7 +24,10 @@
 
 table {
   table-layout: fixed;
-  /*word-wrap: break-word*/
+}
+
+circle {
+  opacity: 0.8;
 }
 
 sidebar label.icheck-box div {

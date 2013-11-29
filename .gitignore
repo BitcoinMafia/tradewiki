@@ -1,3 +1,4 @@
 logs/*
 !.gitkeep
 .DS_Store
+newrelic_agent.log
