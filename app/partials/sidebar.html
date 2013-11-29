@@ -8,77 +8,51 @@
       <div class="row">
         <div class="col-md-4">
           <h4>
-            <span class="label label-primary label-square">SEARCH: </span>
+            <span class="label label-info label-square">SEARCH: </span>
           </h4>
         </div>
         <div class="col-md-8">
-          <input class='form-control' ng-model="searchText">
+          <input class='form-control' ng-model="sidebar.search">
         </div>
       </div>
       <div class="row">
         <div class="col-md-4">
           <h4>
-            <span class="label label-primary label-square">ALEXA: </span>
+            <span class="label label-info label-square">ALEXA: </span>
           </h4>
         </div>
         <div class="col-md-8">
-          <slider floor="500" ceiling="5000000" step="10" precision="0" ng-model="sidebar.alexa"></slider>
+          <slider floor="500" ceiling="5000000" step="1000" precision="0" ng-model="sidebar.alexa"></slider>
           <small>{{sidebar.alexa.withCommas()}}</small>
         </div>
       </div>
       <div class="row">
         <div class="col-md-4">
           <h4>
-            <span class="label label-primary label-square">LIMIT: </span>
+            <span class="label label-info label-square">LIMIT: </span>
           </h4>
         </div>
         <div class="col-md-8">
-          <slider floor="1" ceiling="100" step="1" precision="0" ng-model="sidebar.limit"></slider>
+          <slider floor="1" ceiling="800" step="1" precision="0" ng-model="sidebar.limit"></slider>
           <small>{{sidebar.limit}}</small>
         </div>
       </div>
       <br>
       <div class="line-divider"></div>
       <h4 class='text-center'>
-        <span class="label label-primary label-square">CATEGORIES: </span>
+        <span class="label label-info label-square">CATEGORIES: </span>
       </h4>
       <br>
-      <div ng-repeat="category in categories">
+      <div ng-repeat="(key, value) in sidebar.categories">
         <label class='icheck-box'>
           <input type="checkbox"
-          ng-model="category.checked" i-check checked="{{category.checked}}">
-          <div class="checkbox-label text-{{category.checked ? 'defaut' : 'muted'}}">
-            {{category.category}}
+          ng-model="value.checked" i-check checked="{{value.checked}}">
+
+          <div class="checkbox-label text-{{value.checked ? 'default' : 'muted'}}" style="color:{{value.color}}">
+            {{key}}
           </div>
         </label>
       </div>
     </div>
   </div>
 </div>
-
-
-<!-- <div class="row">
-<div class="text-center">
-<strong>SEARCH</strong>
-</div>
-</div>
-<br>
-<div class="form-group">
-<input class='form-control' placeholder="Search for ...">
-</div>
-<div class="line-break"></div>
-<br>
-<div class="row">
-<div class="text-center">
-<strong>ALEXA RANK</strong>
-</div>
-</div>
-<slider floor="500" ceiling="5000000" step="10" precision="0" ng-model="sidebar.alexa"></slider>
-<br><br>
-<div class="line-break"></div>
-<br>
-<div class="row">
-<div class="text-center">
-<strong>CATEGORIES</strong>
-</div>
-</div> -->

@@ -56,4 +56,18 @@ angular.module('myApp.directives', [])
 
     }
   }
-});
+})
+.directive("chart-bubble", function() {
+  return {
+    scope: {
+      sidebar: "=sidebar"
+    },
+    link: function($scope, element, $attrs) {
+      console.log($scope.sidebar)
+
+      $scope.$watch("sidebar", function(sidebar) {
+        console.log(sidebar)
+      }, true)
+    }
+  }
+})

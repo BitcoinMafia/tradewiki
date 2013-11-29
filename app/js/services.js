@@ -7,5 +7,10 @@
 // In this case it is a simple value service.
 angular.module('myApp.services', [])
 .factory("Data", function($resource) {
-	return $resource("/data/:type.json")
+	return $resource("/data/:type.json", {}, {
+		get: {
+			method: "GET",
+			isArray: false
+		}
+	})
 })

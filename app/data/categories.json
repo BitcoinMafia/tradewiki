@@ -1,12 +1,14 @@
 {
   "Getting started": {
     "checked": true,
+    "color": "#1e2a36",
     "subcategory": [
       "Free Samples and Offers"
     ]
   },
   "Currency exchanges": {
     "checked": true,
+    "color": "#13987e",
     "subcategory": ["Real-time Trading",
       "Fixed rate",
       "Bulk/Large-sized Trades",
@@ -18,6 +20,7 @@
   },
   "Financial": {
     "checked": true,
+    "color": "#2383c4",
     "subcategory": ["Contracts",
       "Equities", "Forex", "Futures",
       "Interest on Bitcoin", "Lending",
@@ -26,16 +29,19 @@
   },
   "Bitcoin eWallets": {
     "checked": true,
+    "color": "#d2850b",
     "subcategory": [
       "Bitcoin Banking and Ewallets"
     ]
   },
   "Bitcoin payment systems": {
     "checked": true,
+    "color": "#df2e1b",
     "subcategory": ["Escrow"]
   },
   "Internet & Mobile services": {
     "checked": true,
+    "color": "#7f9293",
     "subcategory": ["Bitcoin-related",
       "Connectivity", "Design",
       "Web Hosting",
@@ -49,6 +55,7 @@
   },
   "Online products": {
     "checked": true,
+    "color": "#e64540",
     "subcategory": ["Search Engines",
       "Cloud Providers and Services",
       "Software",
@@ -66,6 +73,7 @@
   },
   "Material / Physical Products": {
     "checked": true,
+    "color": "#29527a",
     "subcategory": ["Liquor/Wines",
       "Automobiles",
       "Alternative Energy", "Outdoors",
@@ -91,6 +99,7 @@
   },
   "Professional services": {
     "checked": true,
+    "color": "#cc6600",
     "subcategory": [
       "Language services (teaching, coaching, translation etc.)",
       "Health Care",
@@ -109,6 +118,7 @@
   },
   "Commerce and community": {
     "checked": true,
+    "color": "#e7d70b",
     "subcategory": ["Charity",
       "Web Communities",
       "Financial Services",
@@ -120,6 +130,7 @@
   },
   "Travel / Tourism / Leisure": {
     "checked": true,
+    "color": "#858585",
     "subcategory": [
       "Transportation / Tickets",
       "Events", "Restaurants and cafes",
