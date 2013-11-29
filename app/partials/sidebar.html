@@ -1,0 +1,84 @@
+<br><br>
+<div class="row">
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <h3 class="panel-title">FILTERS</h3>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-4">
+          <h4>
+            <span class="label label-primary label-square">SEARCH: </span>
+          </h4>
+        </div>
+        <div class="col-md-8">
+          <input class='form-control' ng-model="searchText">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <h4>
+            <span class="label label-primary label-square">ALEXA: </span>
+          </h4>
+        </div>
+        <div class="col-md-8">
+          <slider floor="500" ceiling="5000000" step="10" precision="0" ng-model="sidebar.alexa"></slider>
+          <small>{{sidebar.alexa.withCommas()}}</small>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <h4>
+            <span class="label label-primary label-square">LIMIT: </span>
+          </h4>
+        </div>
+        <div class="col-md-8">
+          <slider floor="1" ceiling="100" step="1" precision="0" ng-model="sidebar.limit"></slider>
+          <small>{{sidebar.limit}}</small>
+        </div>
+      </div>
+      <br>
+      <div class="line-divider"></div>
+      <h4 class='text-center'>
+        <span class="label label-primary label-square">CATEGORIES: </span>
+      </h4>
+      <br>
+      <div ng-repeat="category in categories">
+        <label class='icheck-box'>
+          <input type="checkbox"
+          ng-model="category.checked" i-check checked="{{category.checked}}">
+          <div class="checkbox-label text-{{category.checked ? 'defaut' : 'muted'}}">
+            {{category.category}}
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="row">
+<div class="text-center">
+<strong>SEARCH</strong>
+</div>
+</div>
+<br>
+<div class="form-group">
+<input class='form-control' placeholder="Search for ...">
+</div>
+<div class="line-break"></div>
+<br>
+<div class="row">
+<div class="text-center">
+<strong>ALEXA RANK</strong>
+</div>
+</div>
+<slider floor="500" ceiling="5000000" step="10" precision="0" ng-model="sidebar.alexa"></slider>
+<br><br>
+<div class="line-break"></div>
+<br>
+<div class="row">
+<div class="text-center">
+<strong>CATEGORIES</strong>
+</div>
+</div> -->

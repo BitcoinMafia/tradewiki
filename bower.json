@@ -1,0 +1,21 @@
+{
+  "name": "tradecoin",
+  "version": "0.0.1",
+  "homepage": "https://github.com/angular/angular-seed",
+  "authors": [
+    "locksley <scottli_010@hotmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-slider": "*",
+    "bootswatch": "*",
+    "angular-bootstrap": "0.6.0"
+  }
+}
