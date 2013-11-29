@@ -98,9 +98,9 @@ BubbleChart.prototype.create_nodes = function() {
     self.nodesOriginal.push(nodeClone);
   })
 
-  self.nodes.sort(function(a, b) {
-    b.alexa - a.alexa;
-  });
+  // self.nodes.sort(function(a, b) {
+  //   b.alexa - a.alexa;
+  // });
 };
 
 BubbleChart.prototype.create_vis = function() {
@@ -165,7 +165,7 @@ BubbleChart.prototype.start = function() {
 };
 
 BubbleChart.prototype.inverseAlexa = function(num) {
-  var value = (1/num) * 10000000000
+  var value = (1.0/num) * 10000000000
   if (value >= 5000000) {
     return 5000000
   } else {
