@@ -22,6 +22,11 @@
   margin-left: 0px;
 }
 
+table {
+  table-layout: fixed;
+  /*word-wrap: break-word*/
+}
+
 sidebar label.icheck-box div {
   display: inline-block;
   vertical-align: middle;

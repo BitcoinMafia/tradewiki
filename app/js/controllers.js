@@ -16,6 +16,8 @@ angular.module('myApp.controllers', []).
         type: "categories"
       })
     }
+
+    // debugger
   })
   .controller('aboutController', function() {
 

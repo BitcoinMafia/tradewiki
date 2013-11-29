@@ -55,7 +55,6 @@ angular.module('myApp.directives', [])
       sidebar: "=sidebar"
     },
     link: function($scope, element, $attrs) {
-      console.log($scope.sidebar)
 
       d3.json("data/merchants.json", function(data) {
         var chart = new BubbleChart(data);
