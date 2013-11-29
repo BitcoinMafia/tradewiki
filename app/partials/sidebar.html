@@ -23,7 +23,7 @@
         </div>
         <div class="col-md-8">
           <slider floor="1000" ceiling="1000000" step="1000" precision="0" ng-model="sidebar.alexa"></slider>
-          <small>{{sidebar.alexa.withCommas()}}</small>
+          <small><= {{sidebar.alexa.withCommas()}}</small>
         </div>
       </div>
       <div class="row">
@@ -34,7 +34,7 @@
         </div>
         <div class="col-md-8">
           <slider floor="1" ceiling="300" step="1" precision="0" ng-model="sidebar.limit"></slider>
-          <small>{{sidebar.limit}}</small>
+          <small><= {{sidebar.limit}}</small>
         </div>
       </div>
       <br>
