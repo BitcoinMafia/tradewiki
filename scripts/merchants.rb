@@ -92,13 +92,13 @@ module Merchants
 
 		def all
 			clean_data
-			restructure_data
+			sort_data
 			save
 		end
 
 		def clean_data
 			@clean = @data.select do |d|
-				regex = /prweb|etsy|500px|onion|openstreetmap|
+				regex = /prweb|etsy|500px|\.onion|openstreetmap|
 				google|facebook|amazon|bitcointalk|soundcloud|
 				opensourcerer|tripadvisor|carbonmade|hotfrog|eff|
 				menupages|bitcoin\.it|goo\.gl|google\.com|bbc\.co|
@@ -124,7 +124,7 @@ module Merchants
 			end
 		end
 
-		def save(path: "app/data/merchants.json", data: @new_hash)
+		def save(path: "app/data/merchants.json", data: @clean)
 			File.open(path, "w+") do |f|
 				f.write(data.to_json)
 				f.close

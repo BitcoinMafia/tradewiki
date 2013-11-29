@@ -18,13 +18,14 @@ angular.module('myApp.filters', [])
 	      return false;
 	    }
 
-	    // if (sidebar.search !== (undefined || "")) {
-	    // 	var regex = new RegExp(sidebar.search, "i");
 
-		   //  if (name.match(regex)) {
-		   //    return false;
-		   //  }
-	    // }
+	    if (sidebar.search !== undefined || sidebar.search !== "") {
+	    	var regex = new RegExp(sidebar.search, "i");
+
+		    if (!merchant.name.match(regex)) {
+		      return false;
+		    }
+	    }
 
 	    selected.push(merchant)
   	})
