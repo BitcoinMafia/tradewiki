@@ -50,6 +50,7 @@ angular.module('myApp.directives', [])
 })
 .directive("chartBubble", function() {
   return {
+    restrict: "E",
     scope: {
       sidebar: "=sidebar"
     },
@@ -57,14 +58,14 @@ angular.module('myApp.directives', [])
       console.log($scope.sidebar)
 
       d3.json("data/merchants.json", function(data) {
-        var chart = new BubbleChart(json);
+        var chart = new BubbleChart(data);
         chart.start();
         chart.display_all();
-      })
 
-      $scope.$watch("sidebar", function(sidebar) {
-        console.log(sidebar)
-      }, true)
+        $scope.$watch("sidebar", function(sidebar) {
+          chart.filter_by(sidebar)
+        }, true)
+      })
     }
   }
 })
