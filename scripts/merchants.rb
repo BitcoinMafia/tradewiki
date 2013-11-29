@@ -2,6 +2,7 @@ require 'HTTParty'
 require 'csv'
 require 'nokogiri'
 require 'ap'
+require 'active_support/core_ext'
 
 module Merchants
 
@@ -83,10 +84,43 @@ module Merchants
 	end
 
 	class Handler
-		attr_accessor :data
+		attr_accessor :data, :clean, :new_hash
 
-		def initialize(path: "app/data/merchants_alexa.json")
+		def initialize(path: "app/data/merchants_raw.json")
 			@data = JSON.parse(File.open(path).read)
+		end
+
+		def all
+			clean_data
+			restructure_data
+			save
+		end
+
+		def clean_data
+			@clean = @data.select do |d|
+				!d["alexa"].zero? &&
+				d["url"].scan(/openstreetmap|google|facebook|amazon|bitcointalk|soundcloud/).blank?
+			end
+		end
+
+		# def sort_data
+		# 	@clean.sort_by do |k, v|
+		# 		v
+		# 	end
+		# end
+
+		def restructure_data
+			@new_hash = {}
+			@clean.each do |d|
+				@new_hash[d["name"]] = d.except("name")
+			end
+		end
+
+		def save(path: "app/data/merchants.json", data: @new_hash)
+			File.open(path, "w+") do |f|
+				f.write(data.to_json)
+				f.close
+			end
 		end
 	end
 

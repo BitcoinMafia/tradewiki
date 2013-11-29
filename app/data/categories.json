@@ -1,1 +1,132 @@
-[{"checked":true, "category":"Getting started","subcategory":["Free Samples and Offers"]},{"checked":true, "category":"Currency exchanges","subcategory":["Real-time Trading","Fixed rate","Bulk/Large-sized Trades","Gift/Debit Cards","Precious & Base Metals/Coins","Anonymous Exchanges","Local/In-Hand Exchanges"]},{"checked":true, "category":"Financial","subcategory":["Contracts","Equities","Forex","Futures","Interest on Bitcoin","Lending","Options","Stocks","Tools"]},{"checked":true, "category":"Bitcoin eWallets","subcategory":["Bitcoin Banking and Ewallets"]},{"checked":true, "category":"Bitcoin payment systems","subcategory":["Escrow"]},{"checked":true, "category":"Internet & Mobile services","subcategory":["Bitcoin-related","Connectivity","Design","Web Hosting","Dedicated/Virtual Server Hosting","Domain Name and DNS Hosting","Email","VoIP/SMS","Security Services","Mobile App Development","Productivity","Other"]},{"checked":true, "category":"Online products","subcategory":["Search Engines","Cloud Providers and Services","Software","Education-related Software","Gambling","Games","Graphic design","File sharing","Music","Virtual Art","Digital Downloads","Entertainment/Books/Magazines","Social Media/Aggregators","Cyber Begging","Internet Marketing","Mobile Phone Refill Codes"]},{"checked":true, "category":"Material / Physical Products","subcategory":["Liquor/Wines","Automobiles","Alternative Energy","Outdoors","Superstores","Games - Physical","Classified","Jewelry","Marketplaces","Auction sites","Toys, Games and Hobbies","Clothing and accessories","Home","Electronics","Consumables","Books","Music","Film/Movies","Art and Artwork","Art Production","Gift articles","Craftsmanship","Craftwork","Collectables","Car Accessories","Bitcoin promotional articles","Game accessories","Beauty products","Precision mechanics","Printing","Children","Manufacturing","Flags","Health and Fitness","Other","Promotional Products"]},{"checked":true, "category":"Professional services","subcategory":["Language services (teaching, coaching, translation etc.)","Health Care","Creative services","Consulting","Job Boards","Legal Services","Local Massage","Psychotherapy / Counseling","Insurance","Repair and Maintenance Services","Software - Professional services","Technical support","Web Development","Architecture and Engineering Services","Other - Professional services"]},{"checked":true, "category":"Commerce and community","subcategory":["Charity","Web Communities","Financial Services","Information services","Advertising","Political Activism","Local Goods/Services"]},{"checked":true, "category":"Travel / Tourism / Leisure","subcategory":["Transportation / Tickets","Events","Restaurants and cafes","Bed and Breakfast","Hostels","Hotels","Other Accommodations","Travel Companies","Sports","Tour guides"]}]
+{
+  "Getting started": {
+    "checked": true,
+    "subcategory": [
+      "Free Samples and Offers"
+    ]
+  },
+  "Currency exchanges": {
+    "checked": true,
+    "subcategory": ["Real-time Trading",
+      "Fixed rate",
+      "Bulk/Large-sized Trades",
+      "Gift/Debit Cards",
+      "Precious & Base Metals/Coins",
+      "Anonymous Exchanges",
+      "Local/In-Hand Exchanges"
+    ]
+  },
+  "Financial": {
+    "checked": true,
+    "subcategory": ["Contracts",
+      "Equities", "Forex", "Futures",
+      "Interest on Bitcoin", "Lending",
+      "Options", "Stocks", "Tools"
+    ]
+  },
+  "Bitcoin eWallets": {
+    "checked": true,
+    "subcategory": [
+      "Bitcoin Banking and Ewallets"
+    ]
+  },
+  "Bitcoin payment systems": {
+    "checked": true,
+    "subcategory": ["Escrow"]
+  },
+  "Internet & Mobile services": {
+    "checked": true,
+    "subcategory": ["Bitcoin-related",
+      "Connectivity", "Design",
+      "Web Hosting",
+      "Dedicated/Virtual Server Hosting",
+      "Domain Name and DNS Hosting",
+      "Email", "VoIP/SMS",
+      "Security Services",
+      "Mobile App Development",
+      "Productivity", "Other"
+    ]
+  },
+  "Online products": {
+    "checked": true,
+    "subcategory": ["Search Engines",
+      "Cloud Providers and Services",
+      "Software",
+      "Education-related Software",
+      "Gambling", "Games",
+      "Graphic design", "File sharing",
+      "Music", "Virtual Art",
+      "Digital Downloads",
+      "Entertainment/Books/Magazines",
+      "Social Media/Aggregators",
+      "Cyber Begging",
+      "Internet Marketing",
+      "Mobile Phone Refill Codes"
+    ]
+  },
+  "Material / Physical Products": {
+    "checked": true,
+    "subcategory": ["Liquor/Wines",
+      "Automobiles",
+      "Alternative Energy", "Outdoors",
+      "Superstores", "Games - Physical",
+      "Classified", "Jewelry",
+      "Marketplaces", "Auction sites",
+      "Toys, Games and Hobbies",
+      "Clothing and accessories",
+      "Home", "Electronics",
+      "Consumables", "Books", "Music",
+      "Film/Movies", "Art and Artwork",
+      "Art Production", "Gift articles",
+      "Craftsmanship", "Craftwork",
+      "Collectables", "Car Accessories",
+      "Bitcoin promotional articles",
+      "Game accessories",
+      "Beauty products",
+      "Precision mechanics", "Printing",
+      "Children", "Manufacturing",
+      "Flags", "Health and Fitness",
+      "Other", "Promotional Products"
+    ]
+  },
+  "Professional services": {
+    "checked": true,
+    "subcategory": [
+      "Language services (teaching, coaching, translation etc.)",
+      "Health Care",
+      "Creative services", "Consulting",
+      "Job Boards", "Legal Services",
+      "Local Massage",
+      "Psychotherapy / Counseling",
+      "Insurance",
+      "Repair and Maintenance Services",
+      "Software - Professional services",
+      "Technical support",
+      "Web Development",
+      "Architecture and Engineering Services",
+      "Other - Professional services"
+    ]
+  },
+  "Commerce and community": {
+    "checked": true,
+    "subcategory": ["Charity",
+      "Web Communities",
+      "Financial Services",
+      "Information services",
+      "Advertising",
+      "Political Activism",
+      "Local Goods/Services"
+    ]
+  },
+  "Travel / Tourism / Leisure": {
+    "checked": true,
+    "subcategory": [
+      "Transportation / Tickets",
+      "Events", "Restaurants and cafes",
+      "Bed and Breakfast", "Hostels",
+      "Hotels", "Other Accommodations",
+      "Travel Companies", "Sports",
+      "Tour guides"
+    ]
+  }
+}
